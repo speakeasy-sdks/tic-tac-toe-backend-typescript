@@ -1,0 +1,9 @@
+
+
+## 2023-06-29 19:49:11
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.51.3 (2.52.2) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [NPM v1.0.0] https://www.npmjs.com/package/tic-tac-toe-backend/v/1.0.0 - .
