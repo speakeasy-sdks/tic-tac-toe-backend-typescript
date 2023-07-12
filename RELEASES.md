@@ -47,3 +47,11 @@ Based on:
 - Speakeasy CLI 1.56.0 (2.61.0) https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [NPM v1.4.0] https://www.npmjs.com/package/tic-tac-toe-backend/v/1.4.0 - .
+
+## 2023-07-12 01:53:51
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.56.4 (2.61.5) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [NPM v1.4.1] https://www.npmjs.com/package/tic-tac-toe-backend/v/1.4.1 - .
