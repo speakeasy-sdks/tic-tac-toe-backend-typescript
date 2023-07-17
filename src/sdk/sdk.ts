@@ -39,8 +39,8 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.6.0";
-    genVersion = "2.65.0";
+    sdkVersion = "1.7.0";
+    genVersion = "2.66.0";
 
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -116,6 +116,13 @@ export class TicTacToeBackends {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `*/*`)) {
                     res.body = httpRes?.data;
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        httpRes?.data,
+                        httpRes
+                    );
                 }
                 break;
         }
@@ -168,6 +175,13 @@ export class TicTacToeBackends {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `*/*`)) {
                     res.body = httpRes?.data;
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        httpRes?.data,
+                        httpRes
+                    );
                 }
                 break;
         }
@@ -236,6 +250,13 @@ export class TicTacToeBackends {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `*/*`)) {
                     res.body = httpRes?.data;
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        httpRes?.data,
+                        httpRes
+                    );
                 }
                 break;
         }
