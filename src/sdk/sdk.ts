@@ -40,8 +40,8 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.9.1";
-    genVersion = "2.73.1";
+    sdkVersion = "1.10.0";
+    genVersion = "2.75.1";
 
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -89,6 +89,7 @@ export class TicTacToeBackends {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -148,6 +149,7 @@ export class TicTacToeBackends {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -222,6 +224,7 @@ export class TicTacToeBackends {
         if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
