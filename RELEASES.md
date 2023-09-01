@@ -191,3 +191,13 @@ Based on:
 - [typescript v1.16.0] .
 ### Releases
 - [NPM v1.16.0] https://www.npmjs.com/package/tic-tac-toe-backend/v/1.16.0 - .
+
+## 2023-09-01 01:16:32
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.77.0 (2.91.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v1.17.0] .
+### Releases
+- [NPM v1.17.0] https://www.npmjs.com/package/tic-tac-toe-backend/v/1.17.0 - .
