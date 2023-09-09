@@ -4,9 +4,6 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 
-/**
- * The package version.
- */
 export class Version extends SpeakeasyBase {
     @SpeakeasyMetadata()
     version?: string;

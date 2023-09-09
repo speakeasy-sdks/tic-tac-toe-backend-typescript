@@ -108,9 +108,6 @@ export class MoveAfterState extends SpeakeasyBase {
     winningCells?: number[];
 }
 
-/**
- * A Move containing the before and after GameStates.
- */
 export class Move extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: MoveAfterState })
     afterState?: MoveAfterState[];

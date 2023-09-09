@@ -1,7 +1,5 @@
 # Version
 
-The package version.
-
 
 ## Fields
 

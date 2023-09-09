@@ -1,7 +1,5 @@
 # Move
 
-A Move containing the before and after GameStates.
-
 
 ## Fields
 
