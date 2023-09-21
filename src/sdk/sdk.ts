@@ -6,7 +6,7 @@ import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import axios from "axios";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 /**
  * Contains the list of servers available to the SDK
@@ -43,8 +43,8 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.18.3";
-    genVersion = "2.118.1";
+    sdkVersion = "1.18.4";
+    genVersion = "2.122.1";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -86,7 +86,7 @@ export class TicTacToeBackends {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -144,7 +144,7 @@ export class TicTacToeBackends {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/version";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -215,7 +215,7 @@ export class TicTacToeBackends {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...reqBodyHeaders, ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
         if (reqBody == null) throw new Error("request body is required");
         headers["Accept"] = "*/*";
 
