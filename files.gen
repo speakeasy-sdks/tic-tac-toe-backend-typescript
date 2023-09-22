@@ -27,7 +27,6 @@ src/sdk/models/shared/move.ts
 src/sdk/models/shared/moveparameter.ts
 src/sdk/models/shared/index.ts
 src/sdk/models/errors/index.ts
-docs/sdks/tictactoebackends/README.md
 USAGE.md
 docs/models/operations/getresponse.md
 docs/models/operations/getversionresponse.md
@@ -49,4 +48,5 @@ docs/models/shared/moveafterstate.md
 docs/models/shared/move.md
 docs/models/shared/moveparametermove.md
 docs/models/shared/moveparameter.md
+docs/sdks/tictactoebackends/README.md
 .gitattributes
