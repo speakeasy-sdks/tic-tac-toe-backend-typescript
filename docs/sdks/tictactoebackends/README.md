@@ -86,7 +86,7 @@ import { MoveParameterMove } from "tic-tac-toe-backend/dist/sdk/models/shared";
 
 const sdk = new TicTacToeBackends();
 
-sdk.ticTacToeBackends.putGames("corrupti".encode()).then((res: PutGamesResponse) => {
+sdk.ticTacToeBackends.putGames("GjnqQzHiDc" as bytes <<<>>>).then((res: PutGamesResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
