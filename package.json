@@ -1,6 +1,6 @@
 {
   "name": "tic-tac-toe-backend",
-  "version": "1.21.3",
+  "version": "1.21.4",
   "author": "Shain Lafazan",
   "scripts": {
     "prepare": "tsc --build"

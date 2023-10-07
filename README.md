@@ -20,15 +20,16 @@ yarn add tic-tac-toe-backend
 <!-- Start SDK Example Usage -->
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
-import { GetResponse } from "tic-tac-toe-backend/dist/sdk/models/operations";
 
-const sdk = new TicTacToeBackends();
+(async() => {
+  const sdk = new TicTacToeBackends();
 
-sdk.get().then((res: GetResponse) => {
+  const res = await sdk.get();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 <!-- End SDK Example Usage -->
 

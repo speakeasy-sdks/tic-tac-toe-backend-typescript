@@ -19,15 +19,16 @@ Game Engine API for Tic Tac Toe: Game Engine API for Tic Tac Toe
 
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
-import { GetResponse } from "tic-tac-toe-backend/dist/sdk/models/operations";
 
-const sdk = new TicTacToeBackends();
+(async() => {
+  const sdk = new TicTacToeBackends();
 
-sdk.ticTacToeBackends.get().then((res: GetResponse) => {
+  const res = await sdk.ticTacToeBackends.get();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -50,15 +51,16 @@ sdk.ticTacToeBackends.get().then((res: GetResponse) => {
 
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
-import { GetVersionResponse } from "tic-tac-toe-backend/dist/sdk/models/operations";
 
-const sdk = new TicTacToeBackends();
+(async() => {
+  const sdk = new TicTacToeBackends();
 
-sdk.ticTacToeBackends.getVersion().then((res: GetVersionResponse) => {
+  const res = await sdk.ticTacToeBackends.getVersion();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -81,16 +83,17 @@ sdk.ticTacToeBackends.getVersion().then((res: GetVersionResponse) => {
 
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
-import { PutGamesResponse } from "tic-tac-toe-backend/dist/sdk/models/operations";
 import { MoveParameterMove } from "tic-tac-toe-backend/dist/sdk/models/shared";
 
-const sdk = new TicTacToeBackends();
+(async() => {
+  const sdk = new TicTacToeBackends();
 
-sdk.ticTacToeBackends.putGames("GjnqQzHiDc" as bytes <<<>>>).then((res: PutGamesResponse) => {
+  const res = await sdk.ticTacToeBackends.putGames("GjnqQzHiDc" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
