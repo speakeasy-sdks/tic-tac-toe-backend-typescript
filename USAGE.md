@@ -4,14 +4,15 @@
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
 
-(async() => {
-  const sdk = new TicTacToeBackends();
+(async () => {
+    const sdk = new TicTacToeBackends();
 
-  const res = await sdk.get();
+    const res = await sdk.ticTacToeBackends.get();
 
-  if (res.statusCode == 200) {
-    // handle response
-  }
+    if (res.statusCode == 200) {
+        // handle response
+    }
 })();
+
 ```
 <!-- End SDK Example Usage -->
