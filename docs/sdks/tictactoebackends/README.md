@@ -23,7 +23,8 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
 (async() => {
   const sdk = new TicTacToeBackends();
 
-  const res = await sdk.ticTacToeBackends.get();
+  const res = await sdk.get();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -55,7 +56,8 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
 (async() => {
   const sdk = new TicTacToeBackends();
 
-  const res = await sdk.ticTacToeBackends.getVersion();
+  const res = await sdk.getVersion();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -88,7 +90,8 @@ import { MoveParameterMove } from "tic-tac-toe-backend/dist/sdk/models/shared";
 (async() => {
   const sdk = new TicTacToeBackends();
 
-  const res = await sdk.ticTacToeBackends.putGames("GjnqQzHiDc" as bytes <<<>>>);
+  const res = await sdk.putGames(new TextEncoder().encode("0x8BCDbF9B8f"));
+
 
   if (res.statusCode == 200) {
     // handle response

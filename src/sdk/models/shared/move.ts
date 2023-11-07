@@ -4,84 +4,84 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 
-export enum MoveAfterStateCurrentMark {
+export enum CurrentMark {
     X = "X",
     O = "O",
 }
 
-export class MoveAfterStateGrid extends SpeakeasyBase {
+export class Grid extends SpeakeasyBase {
     @SpeakeasyMetadata()
     cells?: string;
 }
 
-export class MoveAfterStatePossibleMovesAfterStateGrid extends SpeakeasyBase {
+export class MoveGrid extends SpeakeasyBase {
     @SpeakeasyMetadata()
     cells?: string;
 }
 
-export enum MoveAfterStatePossibleMovesAfterStateStartingMark {
-    X = "X",
-    O = "O",
-}
-
-export class MoveAfterStatePossibleMovesAfterState extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    grid?: MoveAfterStatePossibleMovesAfterStateGrid;
-
-    @SpeakeasyMetadata()
-    startingMark?: MoveAfterStatePossibleMovesAfterStateStartingMark;
-}
-
-export class MoveAfterStatePossibleMovesBeforeStateGrid extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    cells?: string;
-}
-
-export enum MoveAfterStatePossibleMovesBeforeStateStartingMark {
-    X = "X",
-    O = "O",
-}
-
-export class MoveAfterStatePossibleMovesBeforeState extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    grid?: MoveAfterStatePossibleMovesBeforeStateGrid;
-
-    @SpeakeasyMetadata()
-    startingMark?: MoveAfterStatePossibleMovesBeforeStateStartingMark;
-}
-
-export enum MoveAfterStatePossibleMovesMark {
-    X = "X",
-    O = "O",
-}
-
-export class MoveAfterStatePossibleMoves extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    afterState?: MoveAfterStatePossibleMovesAfterState;
-
-    @SpeakeasyMetadata()
-    beforeState?: MoveAfterStatePossibleMovesBeforeState;
-
-    @SpeakeasyMetadata()
-    cellIndex?: number;
-
-    @SpeakeasyMetadata()
-    mark?: MoveAfterStatePossibleMovesMark;
-}
-
-export enum MoveAfterStateStartingMark {
-    X = "X",
-    O = "O",
-}
-
-export enum MoveAfterStateWinner {
+export enum MoveSchemasStartingMark {
     X = "X",
     O = "O",
 }
 
 export class MoveAfterState extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    currentMark?: MoveAfterStateCurrentMark;
+    grid?: MoveGrid;
+
+    @SpeakeasyMetadata()
+    startingMark?: MoveSchemasStartingMark;
+}
+
+export class MoveSchemasGrid extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    cells?: string;
+}
+
+export enum MoveStartingMark {
+    X = "X",
+    O = "O",
+}
+
+export class BeforeState extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    grid?: MoveSchemasGrid;
+
+    @SpeakeasyMetadata()
+    startingMark?: MoveStartingMark;
+}
+
+export enum Mark {
+    X = "X",
+    O = "O",
+}
+
+export class PossibleMoves extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    afterState?: MoveAfterState;
+
+    @SpeakeasyMetadata()
+    beforeState?: BeforeState;
+
+    @SpeakeasyMetadata()
+    cellIndex?: number;
+
+    @SpeakeasyMetadata()
+    mark?: Mark;
+}
+
+export enum StartingMark {
+    X = "X",
+    O = "O",
+}
+
+export enum Winner {
+    X = "X",
+    O = "O",
+}
+
+export class AfterState extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    currentMark?: CurrentMark;
 
     @SpeakeasyMetadata()
     gameNotStarted?: boolean;
@@ -90,25 +90,25 @@ export class MoveAfterState extends SpeakeasyBase {
     gameOver?: boolean;
 
     @SpeakeasyMetadata()
-    grid?: MoveAfterStateGrid;
+    grid?: Grid;
 
-    @SpeakeasyMetadata({ elemType: MoveAfterStatePossibleMoves })
-    possibleMoves?: MoveAfterStatePossibleMoves[];
+    @SpeakeasyMetadata({ elemType: PossibleMoves })
+    possibleMoves?: PossibleMoves[];
 
     @SpeakeasyMetadata()
-    startingMark?: MoveAfterStateStartingMark;
+    startingMark?: StartingMark;
 
     @SpeakeasyMetadata()
     tie?: boolean;
 
     @SpeakeasyMetadata()
-    winner?: MoveAfterStateWinner;
+    winner?: Winner;
 
     @SpeakeasyMetadata()
     winningCells?: number[];
 }
 
 export class Move extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MoveAfterState })
-    afterState?: MoveAfterState[];
+    @SpeakeasyMetadata({ elemType: AfterState })
+    afterState?: AfterState[];
 }
