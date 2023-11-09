@@ -43,9 +43,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "2.0.0";
-    genVersion = "2.181.1";
-    userAgent = "speakeasy-sdk/typescript 2.0.0 2.181.1 1.0.0 tic-tac-toe-backend";
+    sdkVersion = "2.0.1";
+    genVersion = "2.185.0";
+    userAgent = "speakeasy-sdk/typescript 2.0.1 2.185.0 1.0.0 tic-tac-toe-backend";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -66,7 +66,7 @@ export class TicTacToeBackends {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             serverURL: serverURL,
@@ -85,7 +85,7 @@ export class TicTacToeBackends {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
@@ -94,7 +94,7 @@ export class TicTacToeBackends {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -141,7 +141,7 @@ export class TicTacToeBackends {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/version";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/version";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
@@ -150,7 +150,7 @@ export class TicTacToeBackends {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -200,7 +200,7 @@ export class TicTacToeBackends {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/games";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/games";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -220,7 +220,7 @@ export class TicTacToeBackends {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

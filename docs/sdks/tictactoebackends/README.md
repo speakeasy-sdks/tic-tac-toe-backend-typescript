@@ -25,7 +25,6 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
 
   const res = await sdk.get();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,8 +40,12 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
 
 ### Response
 
-**Promise<[operations.GetResponse](../../models/operations/getresponse.md)>**
+**Promise<[operations.GetResponse](../../sdk/models/operations/getresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getVersion
 
@@ -58,7 +61,6 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
 
   const res = await sdk.getVersion();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,8 +76,12 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
 
 ### Response
 
-**Promise<[operations.GetVersionResponse](../../models/operations/getversionresponse.md)>**
+**Promise<[operations.GetVersionResponse](../../sdk/models/operations/getversionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## putGames
 
@@ -92,7 +98,6 @@ import { MoveParameterMove } from "tic-tac-toe-backend/dist/sdk/models/shared";
 
   const res = await sdk.putGames(new TextEncoder().encode("0x8BCDbF9B8f"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -103,11 +108,15 @@ import { MoveParameterMove } from "tic-tac-toe-backend/dist/sdk/models/shared";
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.PutGamesResponse](../../models/operations/putgamesresponse.md)>**
+**Promise<[operations.PutGamesResponse](../../sdk/models/operations/putgamesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

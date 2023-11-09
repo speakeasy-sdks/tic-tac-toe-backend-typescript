@@ -1,0 +1,16 @@
+# AfterState
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `currentMark`                                                         | [shared.CurrentMark](../../../sdk/models/shared/currentmark.md)       | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `gameNotStarted`                                                      | *boolean*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `gameOver`                                                            | *boolean*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `grid`                                                                | [shared.Grid](../../../sdk/models/shared/grid.md)                     | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `possibleMoves`                                                       | [shared.PossibleMoves](../../../sdk/models/shared/possiblemoves.md)[] | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `startingMark`                                                        | [shared.StartingMark](../../../sdk/models/shared/startingmark.md)     | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `tie`                                                                 | *boolean*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `winner`                                                              | [shared.Winner](../../../sdk/models/shared/winner.md)                 | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `winningCells`                                                        | *number*[]                                                            | :heavy_minus_sign:                                                    | N/A                                                                   |
