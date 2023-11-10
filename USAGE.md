@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
 
