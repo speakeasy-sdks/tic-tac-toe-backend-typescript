@@ -1,8 +1,8 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
 
-(async () => {
+async function run() {
     const sdk = new TicTacToeBackends();
 
     const res = await sdk.get();
@@ -10,7 +10,9 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

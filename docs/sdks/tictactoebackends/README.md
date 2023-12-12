@@ -20,7 +20,7 @@ Game Engine API for Tic Tac Toe: Game Engine API for Tic Tac Toe
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
 
-(async() => {
+async function run() {
   const sdk = new TicTacToeBackends();
 
   const res = await sdk.get();
@@ -28,7 +28,9 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -56,7 +58,7 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
 ```typescript
 import { TicTacToeBackends } from "tic-tac-toe-backend";
 
-(async() => {
+async function run() {
   const sdk = new TicTacToeBackends();
 
   const res = await sdk.getVersion();
@@ -64,7 +66,9 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -93,7 +97,7 @@ import { TicTacToeBackends } from "tic-tac-toe-backend";
 import { TicTacToeBackends } from "tic-tac-toe-backend";
 import { MoveParameterMove } from "tic-tac-toe-backend/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new TicTacToeBackends();
 
   const res = await sdk.putGames(new TextEncoder().encode("0x8BCDbF9B8f"));
@@ -101,7 +105,9 @@ import { MoveParameterMove } from "tic-tac-toe-backend/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

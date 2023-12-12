@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 8ec132ab79d26472fccfd64e44bb0a25
   docVersion: 1.0.0
-  speakeasyVersion: 1.121.1
-  generationVersion: 2.194.1
+  speakeasyVersion: 1.126.0
+  generationVersion: 2.213.3
 generation:
   comments: {}
   sdkClassName: tic-tac-toe-backends
@@ -12,10 +12,10 @@ generation:
     optionalPropertyRendering: withExample
 features:
   typescript:
-    core: 3.1.4
+    core: 3.3.0
     globalServerURLs: 2.82.1
 typescript:
-  version: 2.0.4
+  version: 2.1.0
   author: Shain Lafazan
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: true
@@ -34,3 +34,4 @@ typescript:
   packageName: tic-tac-toe-backend
   published: true
   repoSubDirectory: .
+  templateVersion: v1
