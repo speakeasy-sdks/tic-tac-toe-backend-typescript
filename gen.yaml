@@ -1,21 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 8ec132ab79d26472fccfd64e44bb0a25
-  docVersion: 1.0.0
-  speakeasyVersion: 1.127.0
-  generationVersion: 2.220.0
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: tic-tac-toe-backends
-  repoURL: https://github.com/speakeasy-sdks/tic-tac-toe-backend-typescript.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  typescript:
-    core: 3.3.9
-    globalServerURLs: 2.82.1
 typescript:
   version: 2.1.1
   author: Shain Lafazan
@@ -30,10 +19,7 @@ typescript:
       shared: sdk/models/shared
       webhooks: sdk/models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/tic-tac-toe-backend-typescript
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: tic-tac-toe-backend
-  published: true
-  repoSubDirectory: .
   templateVersion: v1
